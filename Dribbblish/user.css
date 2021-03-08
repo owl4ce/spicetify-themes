@@ -1493,7 +1493,7 @@ button[data-button=add-recommendation] {
     height: calc(100% - var(--main-gap) * 2);
     left: var(--sidebar-width);
     top: var(--main-gap);
-    box-shadow: 0 0 10px 3px #0000003b;
+    box-shadow: 0 0 10px 3px #00000012;
     border-radius: var(--main-corner-radius);
     z-index: 1;
 }
