@@ -37,6 +37,12 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Mechanical
+![demoMechanical](./mechanical.png)
+
+#### Eyecandy
+![demoEyecandy](./eyecandy.png)
+
 #### Wal (Tested on Linux only)
 ![demo9](./wal.gif)
 This theme lets you integrate your pywal generated color palette into Dribblish, thus allowing 
@@ -85,7 +91,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ### Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `gruvbox`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`. Change scheme with commands:
+There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `gruvbox`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`, `mechanical`, `eyecandy`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
