@@ -13,6 +13,9 @@
 #### Dracula
 ![demo4](./dracula.png)
 
+#### Dracula2
+![demoDracula2](./dracula2.png)
+
 #### Gruvbox
 ![demoGruvbox](./gruvbox.png)
 
@@ -34,18 +37,26 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Wal (Tested on Linux only)
+![demo9](./wal.gif)
+This theme lets you integrate your pywal generated color palette into Dribblish, thus allowing 
+dynamic coloring scheming on the go. This is achieved by reading colors from Xresources which 
+are modified by pywal. Once this theme is selected using ```spicetify config color_scheme wal```, 
+all you have to do is generate a new palette based on your wallpaper using pywal and use 
+```spicetify apply``` to set the new scheme. 
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
 ### How to install
 
-Run these command:
+Run these commands:
 
 #### Linux and MacOS:
 In **Bash**:
 ```bash
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
-cp dribbblish.js ../../Extensions
+mkdir -p ../../Extensions
+cp dribbblish.js ../../Extensions/.
 spicetify config extensions dribbblish.js
 spicetify config current_theme Dribbblish color_scheme base
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
@@ -68,7 +79,7 @@ Windows user, please edit your Spotify shortcut and add flag `--transparent-wind
 ![instruction1](./windows-shortcut-instruction.png)
 
 Alternatively, you can use `SpotifyNoControl.exe`, included in this theme package, to completely remove all windows controls and title menu (three dot at top left corner). Title menu still can be access via Alt key. Closing, minimizing can be done via right click menu at top window region.  
-`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. So you should make a shortcut for it, change icon and add to desktop or start menu.  
+`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. You can drag and drop it to your taskbar but make sure you unpin the original Spotify icon first. Alternatively you can make a shortcut for it and add to desktop or start menu.  
 Moreover, by default, Spotify adjusted sidebar items and profile menu icon to stay out of Windows native controls region. If you decided to use `SpotifyNoControl.exe` from now on, please open `user.css` file and change variable `--os-windows-icon-dodge` value to 0 as instruction to snap icons back to their original position.
 
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)

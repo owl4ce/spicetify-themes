@@ -11,7 +11,7 @@
 }
 
 div#popover-container::before {
-    content: "You haven't installed 'dribbblish.js' extension. Please run follow instruction on theme README page.";
+    content: "You haven't installed 'dribbblish.js' extension. Please follow instructions on theme README page.";
     font-size: 30px;
 }
 
@@ -645,6 +645,10 @@ body.remotebar .view-player .player-bar-wrapper {
 	margin-top: calc(var(--os-windows-icon-dodge) * 30px);
 }
 
+.body-container--mac .LeftSidebar {
+    margin-top: 24px;
+}
+
 .RootlistItem--is-active:before {
     top: 3px;
 }
@@ -1099,6 +1103,7 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
     flex: 2 1;
     order: 2;
     min-width: 0;
+    max-width: none !important;
 }
 
 .view-player .now-playing-container .caption {
@@ -1317,6 +1322,7 @@ button#player-button-repeat,
 #view-now-playing.expanded {
     bottom: calc(var(--bar-height) + var(--main-gap));
     left: var(--sidebar-width);
+    border-radius: var(--cover-border-radius);
 }
 
 #view-now-playing a.image.large figure,
@@ -1328,6 +1334,7 @@ button#player-button-repeat,
     width: var(--left-sidebar-item-height);
     height: var(--left-sidebar-item-height);
     background-size: cover;
+    background-position: center;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -1404,6 +1411,13 @@ button#player-button-repeat,
 .lyrics-lines-container .lyrics-list-animated .lyrics-line[data-animation-index="2"],
 .lyrics-lines-container .lyrics-list-animated .lyrics-line[data-animation-index="3"] {
     color: var(--modspotify_secondary_fg);
+}
+
+/* "Recommended Songs" header */
+#playlist-extender .playlist-extender-content header {
+    /* 52px will match the surrounding padding */
+    padding-left: 52px;
+    padding-right: 52px;
 }
 
 .SidebarListItemLink:before {
@@ -1506,4 +1520,15 @@ button[data-button=add-recommendation] {
     background: linear-gradient(to top, var(--modspotify_secondary_bg) 10%, transparent);
     z-index: 3;
     pointer-events: none;
+}
+
+.progress-bar .handle.prog-tooltip {
+    min-width: 100px;
+    width: unset;
+    height: 25px;
+    top: -35px;
+    padding: 0 5px;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--modspotify_secondary_fg);
 }

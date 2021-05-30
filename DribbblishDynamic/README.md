@@ -1,8 +1,11 @@
 # DribbblishDynamic
-This is a tweaked version of Dribbblish theme. The main difference is that the highligh color is dynamic, ie. it will match the current album art colours.
+This is a tweaked version of Dribbblish theme. The main difference is that the highligh color is dynamic, ie. it will match the current album art colours (note: local files are excluded).
+
 ## Screenshots
+
 #### Dark
 ![demo-dark](./color-match-bg.gif)
+
 #### White
 ![demo-white](./white.png)
 
@@ -16,7 +19,8 @@ Run these command:
 In **Bash**:
 ```bash
 cd "$(dirname "$(spicetify -c)")/Themes/DribbblishDynamic"
-cp dribbblish-dynamic.js ../../Extensions
+mkdir -p ../../Extensions
+cp dribbblish-dynamic.js ../../Extensions/.
 spicetify config extensions dribbblish-dynamic.js
 spicetify config current_theme DribbblishDynamic color_scheme dark
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
@@ -39,7 +43,7 @@ Windows user, please edit your Spotify shortcut and add flag `--transparent-wind
 ![instruction1](./windows-shortcut-instruction.png)
 
 Alternatively, you can use `SpotifyNoControl.exe`, included in this theme package, to completely remove all windows controls and title menu (three dot at top left corner). Title menu still can be access via Alt key. Closing, minimizing can be done via right click menu at top window region.  
-`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. So you should make a shortcut for it, change icon and add to desktop or start menu.  
+`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. You can drag and drop it to your taskbar but make sure you unpin the original Spotify icon first. Alternatively you can make a shortcut for it and add to desktop or start menu.  
 Moreover, by default, Spotify adjusted sidebar items and profile menu icon to stay out of Windows native controls region. If you decided to use `SpotifyNoControl.exe` from now on, please open `user.css` file and change variable `--os-windows-icon-dodge` value to 0 as instruction to snap icons back to their original position.
 
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
@@ -53,7 +57,7 @@ spicetify apply
 
 # How to uninstall 
 
-Remove the dribbblish script with the following commands 
+Remove the dribbblish-dynamic script with the following commands 
 
 ```
 spicetify config extensions dribbblish-dynamic.js-
@@ -85,4 +89,5 @@ These keys are used in the `colors.ini` file.
 |`miscellaneous_hover_bg`| Hover Color for the Tooltips|
 |`preserve_1`| Misc text colors|
 
+## Credits
 Shoutout to @khanhas for the original Dribbblish theme!
